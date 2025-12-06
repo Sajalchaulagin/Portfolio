@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Chaule | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+</head>
+
+<body class="light-mode default-theme">
+    <!-- Floating Animations -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
+    <!-- Theme Switcher Panel -->
+    <div class="theme-panel">
+        <div class="theme-header">
+            <i class="fas fa-palette"></i>
+            <h4>Theme Colors</h4>
+            <button class="close-panel">&times;</button>
+        </div>
+        <div class="theme-options">
+            <div class="theme-option" data-theme="default">
+                <div class="theme-preview default-theme"></div>
+                <span>Default</span>
+            </div>
+            <div class="theme-option" data-theme="ocean">
+                <div class="theme-preview ocean-theme"></div>
+                <span>Ocean</span>
+            </div>
+            <div class="theme-option" data-theme="forest">
+                <div class="theme-preview forest-theme"></div>
+                <span>Forest</span>
+            </div>
+            <div class="theme-option" data-theme="sunset">
+                <div class="theme-preview sunset-theme"></div>
+                <span>Sunset</span>
+            </div>
+            <div class="theme-option" data-theme="midnight">
+                <div class="theme-preview midnight-theme"></div>
+                <span>Midnight</span>
+            </div>
+            <div class="theme-option" data-theme="violet">
+                <div class="theme-preview violet-theme"></div>
+                <span>Violet</span>
+            </div>
+        </div>
+        <div class="theme-mode-toggle">
+            <button id="mode-toggle" class="mode-toggle-btn">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <button id="theme-switcher" class="theme-btn" aria-label="Toggle theme">
+            <i class="fas fa-palette"></i>
+        </button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-text">Mr. Chaule</span>
+                <div class="logo-dot"></div>
+            </a>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i>
+                        Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+                <li class="nav-item nav-theme-toggle">
+                    <button class="nav-theme-btn">
+                        <i class="fas fa-adjust"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home/Introduction Section -->
+    <section id="home" class="section home-section">
+        <div class="container home-container">
+            <div class="home-content">
+                <div class="intro-text">
+                    <h4 class="greeting"><span class="wave">👋</span> Hello, I'm</h4>
+                    <h1 class="main-title">
+                        <span class="title-word title-word-1">Sajal</span>
+                        <span class="title-word title-word-2">Chaulagain</span>
+                    </h1>
+                    <h2 class="subtitle">aka <span class="highlight">Mr. Chaule</span></h2>
+
+                    <div class="typing-container">
+                        <p>I'm a
+                            <span id="typed-text" class="typed-text"></span>
+                            <span class="typing-cursor"></span>
+                        </p>
+                    </div>
+
+                    <p class="intro-description">
+                        A passionate tech enthusiast dedicated to creating innovative solutions
+                        through web development, IoT projects, and digital content creation.
+                    </p>
+
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Contact Me</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                    </div>
+
+                    <div class="social-badges">
+                        <div class="badge">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>IT Student</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Web Developer</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-video"></i>
+                            <span>Content Creator</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-image-container">
+                    <div class="profile-placeholder">
+                        <div class="image-wrapper">
+                            <div class="profile-glow"></div>
+                            <!-- Beginners: auto-img class ensures perfect scaling without distortion -->
+                            <img src="images/me ai 4.png" alt="Sajal Chaulagain - Portfolio Profile"
+                                class="auto-img profile-circle">
+                            <!-- Fallback for slow loading or missing images -->
+                            <i class="fas fa-user-circle fallback-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="floating-elements">
+                        <div class="floating-element fe-1">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="floating-element fe-2">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="floating-element fe-3">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="floating-element fe-4">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <a href="#about" class="scroll-down">
+                    <span>Scroll</span>
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrows">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>
+                        <span class="text-highlight">Student</span>,
+                        <span class="text-highlight">Developer</span> &
+                        <span class="text-highlight">Tech Enthusiast</span>
+                    </h3>
+
+                    <div class="about-paragraphs">
+                        <p class="animated-paragraph">
+                            I am currently pursuing a Bachelor of Information Technology (BIT) at
+                            <strong class="highlight-text">Texas College of Management & IT</strong>, where I'm
+                            developing
+                            a strong foundation in modern technologies and software development.
+                        </p>
+
+                        <p class="animated-paragraph">
+                            My passion lies at the intersection of <strong class="highlight-text">Web
+                                Development</strong>,
+                            <strong class="highlight-text">Artificial Intelligence</strong>, and <strong
+                                class="highlight-text">IoT</strong>
+                            technologies. I enjoy creating projects that solve real-world problems
+                            and enhance user experiences.
+                        </p>
+                    </div>
+
+                    <div class="experience-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Web Development</h4>
+                                <p>HTML/CSS/JavaScript, React, Node.js</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Video Editing</h4>
+                                <p>Adobe Premiere, After Effects, Content Creation</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-keyboard"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Typing</h4>
+                                <p>English & Nepali, 80+ WPM</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Problem Solving</h4>
+                                <p>Creative solutions, Analytical thinking</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number" data-count="1">0</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-count="1 month">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-count="100">0</div>
+                            <div class="stat-label">% Dedication</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <div class="about-glow"></div>
+                        <div class="about-image-wrapper">
+                            <!-- Beginners: This image will automatically fill the container while maintaining aspect ratio -->
+                            <img src="images/me.jpg" alt="About Sajal Chaulagain - BIT Student"
+                                class="auto-img about-content-image">
+                            <!-- Fallback icon shows if image fails to load -->
+                            <i class="fas fa-user-graduate fallback-icon"></i>
+                        </div>
+                        <div class="about-image-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Skills</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Technical and professional abilities</p>
+            </div>
+
+            <div class="skills-categories">
+                <!-- Tech Skills -->
+                <div class="category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        <span>Programming & Tech Skills</span>
+                        <div class="title-line"></div>
+                    </h3>
+
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="skill-info">
+                                <div class="skill-header">
+                                    <h4>HTML/CSS/JavaScript</h4>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-info">
+                                <div class="skill-header">
+                                    <h4>Python (Basic)</h4>
+                                    <span class="skill-percent">70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="skill-info">
+                                <div class="skill-header">
+                                    <h4>Video Editing</h4>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <div class="skill-info">
+                                <div class="skill-header">
+                                    <h4>MS Office Suite</h4>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-keyboard"></i>
+                            </div>
+                            <div class="skill-info">
+                                <div class="skill-header">
+                                    <h4>Typing (English & Nepali)</h4>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="category">
+                    <h3 class="category-title">
+                        <i class="fas fa-users"></i>
+                        <span>Soft Skills</span>
+                        <div class="title-line"></div>
+                    </h3>
+
+                    <div class="soft-skills">
+                        <div class="soft-skill-item">
+                            <div class="soft-skill-icon">
+                                <i class="fas fa-comments"></i>
+                                <div class="icon-ring"></div>
+                            </div>
+                            <div class="soft-skill-info">
+                                <h4>Communication</h4>
+                                <p>Effective verbal and written communication abilities</p>
+                                <div class="skill-level">
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="soft-skill-item">
+                            <div class="soft-skill-icon">
+                                <i class="fas fa-palette"></i>
+                                <div class="icon-ring"></div>
+                            </div>
+                            <div class="soft-skill-info">
+                                <h4>Creativity</h4>
+                                <p>Innovative thinking and creative problem-solving</p>
+                                <div class="skill-level">
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="soft-skill-item">
+                            <div class="soft-skill-icon">
+                                <i class="fas fa-lightbulb"></i>
+                                <div class="icon-ring"></div>
+                            </div>
+                            <div class="soft-skill-info">
+                                <h4>Problem-Solving</h4>
+                                <p>Analytical approach to identify and resolve issues</p>
+                                <div class="skill-level">
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="soft-skill-item">
+                            <div class="soft-skill-icon">
+                                <i class="fas fa-handshake"></i>
+                                <div class="icon-ring"></div>
+                            </div>
+                            <div class="soft-skill-info">
+                                <h4>Teamwork</h4>
+                                <p>Collaborative mindset and effective team participation</p>
+                                <div class="skill-level">
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                    <span class="level-dot active"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-footer">
+                <div class="skill-note">
+                    <i class="fas fa-sync-alt"></i>
+                    <p>Continuously learning and improving my skills</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Showcase of my recent work</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project Card - IoT Air Quality Monitoring System -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <!-- Beginners: Project images will crop to fit perfectly while maintaining aspect ratio -->
+                            <img src="images/sensors pic.jpg" alt="IoT Air Quality Monitoring System Project"
+                                class="auto-img project-display-image">
+                            <!-- Fallback shows if image doesn't load -->
+                            <i class="fas fa-wind fallback-icon"></i>
+                            <div class="project-image-overlay"></div>
+                            <div class="project-image-label">IoT Project</div>
+                        </div>
+                        <div class="project-hover">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>View Project</span>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">IoT-Based Air Quality Monitoring System</h3>
+                            <div class="project-year">2025</div>
+                        </div>
+
+                        <p class="project-description">
+                            A smart IoT project that monitors air quality levels using sensors
+                            and displays the data live on a dashboard. The system tracks pollutants,
+                            temperature, and humidity, providing real-time alerts.
+                        </p>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Sensors</span>
+                            <span class="tech-tag">Dashboard</span>
+                            <span class="tech-tag">Real-time</span>
+                            <span class="tech-tag">ESP32</span>
+                        </div>
+
+                        <a href="https://example.com/air-quality-monitoring-system" target="_blank"
+                            class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Presentation -> Introduction</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="https://air-quality-monitoring-system.netlify.app/" target="_blank"
+                            class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card - Portfolio Website -->
+                <!-- <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <img src="PUT-YOUR-IMAGE-LINK-HERE" alt="Portfolio Website Project" class="auto-img project-display-image">
+                            <i class="fas fa-laptop-code fallback-icon"></i>
+                            <div class="project-image-overlay"></div>
+                            <div class="project-image-label">Web Development</div>
+                        </div>
+                        <div class="project-hover">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>View Project</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Interactive Portfolio Website</h3>
+                            <div class="project-year">2024</div>
+                        </div>
+                        
+                        <p class="project-description">
+                            A fully responsive portfolio website with dynamic themes, smooth animations, 
+                            and interactive components. Features dark/light mode, multiple color themes, 
+                            and a working contact form with EmailJS integration.
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive</span>
+                            <span class="tech-tag">EmailJS</span>
+                            <span class="tech-tag">Animations</span>
+                        </div>
+                        
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>View Source</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- Developer Note: Add more project cards here later -->
+                <div class="project-placeholder">
+                    <div class="placeholder-content">
+                        <div class="placeholder-icon">
+                            <i class="fas fa-plus-circle"></i>
+                            <div class="pulse-ring"></div>
+                        </div>
+                        <h3>More Projects Coming Soon</h3>
+                        <p>I'm constantly working on new projects. Stay tuned!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h3><i class="fas fa-envelope-open-text"></i> Send Me a Message</h3>
+                        <p>I'll respond as soon as possible</p>
+                    </div>
+
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group floating-label">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Full Name</label>
+                            <div class="focus-line"></div>
+                        </div>
+
+                        <div class="form-group floating-label">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                            <div class="focus-line"></div>
+                        </div>
+
+                        <div class="form-group floating-label">
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="focus-line"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                            <div class="btn-spinner"></div>
+                        </button>
+
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-header">
+                        <h3><i class="fas fa-address-card"></i> Contact Information</h3>
+                        <p>Feel free to reach out through any of these platforms</p>
+                    </div>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-user"></i>
+                                <div class="icon-bg"></div>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Name</h4>
+                                <p>Sajal Chaulagain</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div class="icon-bg"></div>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Education</h4>
+                                <p>
+                                    BIT Student at
+                                    <a href="https://www.google.com/maps/place/Texas+College+of+Management+%26+IT/@27.7137003,85.3424286,77m/data=!3m1!1e3!4m14!1m7!3m6!1s0x39eb19711fc67af3:0x4ec22ef7b705ac5!2sTexas+College+of+Management+%26+IT!8m2!3d27.7135615!4d85.3424839!16s%2Fg%2F11c55cm1pm!3m5!1s0x39eb19711fc67af3:0x4ec22ef7b705ac5!8m2!3d27.7135615!4d85.3424839!16s%2Fg%2F11c55cm1pm?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
+                                        target="_blank">
+                                        Texas College of Management & IT
+                                    </a>
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="icon-bg"></div>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>
+                                    <a href="https://www.google.com/maps/place/Gaushala,+Kathmandu+44600/@27.7111324,85.3479122,1107m/data=!3m1!1e3!4m6!3m5!1s0x39eb1979b37f998b:0x89608cc1a83425f1!8m2!3d27.7084959!4d85.3465697!16s%2Fg%2F113ggvrs5?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D9"
+                                        target="_blank">
+                                        Kathmandu, Nepal
+                                    </a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h4>Connect With Me</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/sajal.chaulagain.5" class="social-link" target="_blank"
+                                aria-label="Facebook">
+                                <div class="social-icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                                <span>Facebook</span>
+                            </a>
+
+                            <a href="https://www.instagram.com/chaulagain.sajal/" class="social-link" target="_blank"
+                                aria-label="Instagram">
+                                <div class="social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <span>Instagram</span>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/sajal-chaulagain/" class="social-link" target="_blank"
+                                aria-label="LinkedIn">
+                                <div class="social-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <span>LinkedIn</span>
+                            </a>
+
+                            <a href="https://github.com/Sajalchaulagin" class="social-link" target="_blank"
+                                aria-label="GitHub">
+                                <div class="social-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <span>GitHub</span>
+                            </a>
+
+                            <a href="https://www.youtube.com/@mr.chaule" class="social-link" target="_blank"
+                                aria-label="YouTube">
+                                <div class="social-icon">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <span>Youtube</span>
+                            </a>
+
+                            <a href="mailto:chaulagainsajal94@gmail.com" class="social-link" aria-label="Email">
+                                <div class="social-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <span>Email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-wrapper">
+                        <h3>Mr. Chaule</h3>
+                        <div class="logo-dot"></div>
+                    </div>
+                    <p>Creating digital experiences with passion</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Follow Me</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/sajal.chaulagain.5" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/chaulagain.sajal/" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/Sajalchaulagin" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sajal-chaulagain/" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@mr.chaule" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe for updates on new projects</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; Sajal Chaulagain | Mr. Chaule. All rights reserved.</p>
+                <div class="footer-credits">
+                    <span>Made with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+        <div class="back-to-top-wave"></div>
+    </button>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="loading-circle"></div>
+                <div class="loading-text">Mr. Chaule</div>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
