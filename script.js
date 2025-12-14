@@ -3,7 +3,7 @@
 
 // Initialize EmailJS with your public key
 // Replace with your actual EmailJS user ID
-emailjs.init("nORHs36xTSq6pvXWg");
+emailjs.init("#");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -423,8 +423,8 @@ function initContactForm() {
             // Send email using EmailJS
             // Replace with your actual EmailJS service ID and template ID
             const response = await emailjs.send(
-                'service_tfnyy8h', // Replace with your EmailJS service ID
-                'template_eh9pctg', // Replace with your EmailJS template ID
+                '#', // Replace with your EmailJS service ID
+                '#', // Replace with your EmailJS template ID
                 templateParams
             );
             
