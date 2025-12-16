@@ -423,8 +423,8 @@ function initContactForm() {
             // Send email using EmailJS
             // Replace with your actual EmailJS service ID and template ID
             const response = await emailjs.send(
-                '#', // Replace with your EmailJS service ID
-                '#', // Replace with your EmailJS template ID
+                'service_3j58lls', // Replace with your EmailJS service ID
+                'template_re4hyyz', // Replace with your EmailJS template ID
                 templateParams
             );
             
