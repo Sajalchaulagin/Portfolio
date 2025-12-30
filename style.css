@@ -1615,20 +1615,20 @@ section {
     transition: width 1.5s ease-out;
     position: relative;
     overflow: hidden;
+    min-width: 10px;
 }
 
 .skill-progress::after {
     content: '';
     position: absolute;
-    top: 50%;
+    top: -4px;
     right: 0;
-    transform: translate(50%, -50%);
-    width: 12px;
-    height: 12px;
+    width: 3px;
+    height: 16px;
     background-color: white;
+    border-radius: 1.5px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
     z-index: 3;
-    border-radius: 50%;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 0 2px var(--primary-color);
 }
 
 .soft-skills {
