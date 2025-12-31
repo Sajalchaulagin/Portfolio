@@ -3,7 +3,7 @@
 
 // Initialize EmailJS with your public key
 // Replace with your actual EmailJS user ID
-emailjs.init("#");
+emailjs.init("a5L1yck8hyiyFwolW");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
@@ -416,7 +416,7 @@ function initContactForm() {
             from_email: email,
             message: message,
             to_name: 'Sajal Chaulagain',
-            reply_to: email
+            reply_to: email,
         };
 
         try {
@@ -443,13 +443,7 @@ function initContactForm() {
         } catch (error) {
             console.error('EmailJS Error:', error);
 
-            // Fallback: Show success message anyway (for demo purposes)
-            // In a real application, you would show an error message
-            showFormMessage('Thank you for your message! I\'ll get back to you soon.', 'success');
-            contactForm.reset();
-
-            // For demo: uncomment the line below to show actual error
-            // showFormMessage('Failed to send message. Please try again later.', 'error');
+            showFormMessage('Failed to send message. Please try again later.', 'error');
         } finally {
             resetButton();
         }
