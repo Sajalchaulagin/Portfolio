@@ -375,129 +375,136 @@ function initSkillBars() {
 
 // Working Contact Form with EmailJS
 function initContactForm() {
-    const contactForm = document.getElementById('contact-form');
-    const formMessage = document.getElementById('form-message');
-    const submitBtn = contactForm.querySelector('.submit-btn');
-    const btnSpinner = contactForm.querySelector('.btn-spinner');
-    const btnText = submitBtn.querySelector('span');
+  const contactForm = document.getElementById("contact-form");
+  const formMessage = document.getElementById("form-message");
+  const submitBtn = contactForm.querySelector(".submit-btn");
+  const btnSpinner = contactForm.querySelector(".btn-spinner");
+  const btnText = submitBtn.querySelector("span");
 
-    if (!contactForm) return;
+  if (!contactForm) return;
 
-    contactForm.addEventListener('submit', async function (e) {
-        e.preventDefault();
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-        // Show loading state
-        submitBtn.disabled = true;
-        btnSpinner.classList.add('active');
-        btnText.textContent = 'Sending...';
+    // Show loading state
+    submitBtn.disabled = true;
+    btnSpinner.classList.add("active");
+    btnText.textContent = "Sending...";
 
-        // Get form data
-        const formData = new FormData(contactForm);
-        const name = formData.get('name').trim();
-        const email = formData.get('email').trim();
-        const message = formData.get('message').trim();
+    // Get form data
+    const formData = new FormData(contactForm);
+    const name = formData.get("name").trim();
+    const email = formData.get("email").trim();
+    const message = formData.get("message").trim();
 
-        // Simple validation
-        if (!name || !email || !message) {
-            showFormMessage('Please fill in all fields.', 'error');
-            resetButton();
-            return;
-        }
-
-        if (!isValidEmail(email)) {
-            showFormMessage('Please enter a valid email address.', 'error');
-            resetButton();
-            return;
-        }
-
-        // Prepare template parameters for EmailJS
-        const templateParams = {
-            from_name: name,
-            from_email: email,
-            message: message,
-            to_name: 'Sajal Chaulagain',
-            reply_to: email,
-        };
-
-        try {
-            // Send email using EmailJS
-            // Replace with your actual EmailJS service ID and template ID
-            const response = await emailjs.send(
-                'service_3j58lls', // Replace with your EmailJS service ID
-                'template_re4hyyz', // Replace with your EmailJS template ID
-                templateParams
-            );
-
-            // Success message
-            showFormMessage('Thank you for your message! I\'ll get back to you soon.', 'success');
-
-            // Reset form
-            contactForm.reset();
-
-            // Add success animation
-            submitBtn.style.background = 'linear-gradient(135deg, #10b981, #34d399)';
-            setTimeout(() => {
-                submitBtn.style.background = '';
-            }, 2000);
-
-        } catch (error) {
-            console.error('EmailJS Error:', error);
-
-            showFormMessage('Failed to send message. Please try again later.', 'error');
-        } finally {
-            resetButton();
-        }
-    });
-
-    // Email validation helper
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
+    // Simple validation
+    if (!name || !email || !message) {
+      showFormMessage("Please fill in all fields.", "error");
+      resetButton();
+      return;
     }
 
-    // Show form message
-    function showFormMessage(text, type) {
-        formMessage.textContent = text;
-        formMessage.className = `form-message ${type} show`;
-
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formMessage.classList.remove('show');
-            setTimeout(() => {
-                formMessage.textContent = '';
-                formMessage.className = 'form-message';
-            }, 300);
-        }, 5000);
+    if (!isValidEmail(email)) {
+      showFormMessage("Please enter a valid email address.", "error");
+      resetButton();
+      return;
     }
 
-    // Reset button state
-    function resetButton() {
-        submitBtn.disabled = false;
-        btnSpinner.classList.remove('active');
-        btnText.textContent = 'Send Message';
+    // Prepare template parameters for EmailJS
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+      to_name: "Sajal Chaulagain",
+      reply_to: email,
+    };
+
+    try {
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        "service_3j58lls",
+        "template_re4hyyz",
+        templateParams
+      );
+
+      // Success message
+      showFormMessage(
+        "Thank you for your message! I'll get back to you soon.",
+        "success"
+      );
+
+      // Reset form
+      contactForm.reset();
+
+      // Add success animation
+      submitBtn.style.background =
+        "linear-gradient(135deg, #10b981, #34d399)";
+      setTimeout(() => {
+        submitBtn.style.background = "";
+      }, 2000);
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      showFormMessage(
+        "Failed to send message. Please try again later.",
+        "error"
+      );
+    } finally {
+      resetButton();
     }
+  });
 
-    // Add floating label animation
-    const floatingLabels = document.querySelectorAll('.floating-label');
-    floatingLabels.forEach(label => {
-        const input = label.querySelector('input, textarea');
+  // Email validation helper
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
 
-        input.addEventListener('focus', function () {
-            label.classList.add('focused');
-        });
+  // Show form message
+  function showFormMessage(text, type) {
+    formMessage.textContent = text;
+    formMessage.className = `form-message ${type} show`;
 
-        input.addEventListener('blur', function () {
-            if (!this.value) {
-                label.classList.remove('focused');
-            }
-        });
+    // Hide message after 5 seconds
+    setTimeout(() => {
+      formMessage.classList.remove("show");
+      setTimeout(() => {
+        formMessage.textContent = "";
+        formMessage.className = "form-message";
+      }, 300);
+    }, 5000);
+  }
 
-        // Check on load if there's already content
-        if (input.value) {
-            label.classList.add('focused');
-        }
-    });
+  // Reset button state
+  function resetButton() {
+    submitBtn.disabled = false;
+    btnSpinner.classList.remove("active");
+    btnText.textContent = "Send Message";
+  }
 }
+
+document.addEventListener("DOMContentLoaded", initContactForm);
+
+// Add floating label animation
+const floatingLabels = document.querySelectorAll('.floating-label');
+floatingLabels.forEach(label => {
+    const input = label.querySelector('input, textarea');
+
+    input.addEventListener('focus', function () {
+        label.classList.add('focused');
+    });
+
+    input.addEventListener('blur', function () {
+        if (!this.value) {
+            label.classList.remove('focused');
+        }
+    });
+
+    // Check on load if there's already content
+    if (input.value) {
+        label.classList.add('focused');
+    }
+});
+
 
 // Back to Top Button
 function initBackToTop() {
